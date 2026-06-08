@@ -1,0 +1,186 @@
+/* --- VARIÁVEIS DE CORES RETRÔ --- */
+:root {
+    --bg-color: #f4ecd8;       /* Bege papel antigo */
+    --main-dark: #2b1e17;      /* Marrom quase preto */
+    --agro-green: #3a5f43;     /* Verde musgo */
+    --agro-brown: #8b5a2b;     /* Marrom terra */
+    --accent-yellow: #f0a500;   /* Amarelo fliperama */
+    
+    --font-pixel: 'Press Start 2P', cursive;
+    --font-retro-text: 'VT323', monospace;
+}
+
+/* --- CONFIGURAÇÃO GERAL --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--main-dark);
+    font-family: var(--font-retro-text);
+    font-size: 24px;
+    line-height: 1.4;
+    padding-bottom: 40px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- HEADER --- */
+.retro-header {
+    background-color: var(--main-dark);
+    color: var(--bg-color);
+    text-align: center;
+    padding: 40px 0;
+    border-bottom: 8px solid var(--agro-green);
+}
+
+.retro-badge {
+    font-family: var(--font-pixel);
+    font-size: 12px;
+    background-color: var(--accent-yellow);
+    color: var(--main-dark);
+    padding: 6px 12px;
+    display: inline-block;
+    margin-bottom: 15px;
+    border: 4px solid var(--bg-color);
+}
+
+.retro-header h1 {
+    font-family: var(--font-pixel);
+    font-size: 22px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.subtitle {
+    color: var(--accent-yellow);
+    font-size: 28px;
+}
+
+/* --- MENU --- */
+.retro-nav {
+    background-color: var(--agro-brown);
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 6px solid var(--main-dark);
+}
+
+.nav-link {
+    font-family: var(--font-pixel);
+    font-size: 12px;
+    color: var(--bg-color);
+    text-decoration: none;
+    margin: 0 15px;
+    display: inline-block;
+}
+
+.nav-link:hover {
+    color: var(--accent-yellow);
+}
+
+/* --- BLOCOS / CARDS REUTILIZÁVEIS --- */
+.retro-card {
+    background: #fff;
+    border: 6px solid var(--main-dark);
+    box-shadow: 8px 8px 0px var(--main-dark);
+    padding: 25px;
+    margin: 40px 0;
+}
+
+.retro-card h2 {
+    font-family: var(--font-pixel);
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: var(--agro-green);
+    border-bottom: 4px dashed var(--main-dark);
+    padding-bottom: 10px;
+}
+
+/* --- GRID PARA DUAS COLUNAS --- */
+.retro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.card-green {
+    border-color: var(--agro-green);
+    box-shadow: 8px 8px 0px var(--agro-green);
+}
+
+.card-green h3 {
+    font-family: var(--font-pixel);
+    font-size: 16px;
+    color: var(--agro-green);
+    margin-bottom: 10px;
+}
+
+.card-brown {
+    border-color: var(--agro-brown);
+    box-shadow: 8px 8px 0px var(--agro-brown);
+}
+
+.card-brown h3 {
+    font-family: var(--font-pixel);
+    font-size: 16px;
+    color: var(--agro-brown);
+    margin-bottom: 10px;
+}
+
+/* --- LISTAS --- */
+.retro-list {
+    list-style: none;
+}
+
+.retro-list li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.retro-list span {
+    margin-left: 15px;
+}
+
+/* --- FOOTER --- */
+.retro-footer {
+    text-align: center;
+    margin-top: 60px;
+    font-family: var(--font-pixel);
+    font-size: 10px;
+    color: var(--main-dark);
+}
+
+.pixel-art-text {
+    margin-top: 15px;
+    color: var(--agro-brown);
+    animation: blink 1s infinite;
+}
+
+/* Efeito Piscante Clássico */
+@keyframes blink {
+    0%, 49% { opacity: 1; }
+    50%, 100% { opacity: 0; }
+}
+
+/* --- RESPONSIVIDADE PARA CELULAR --- */
+@media (max-width: 600px) {
+    .retro-grid {
+        grid-template-columns: 1fr;
+    }
+    .retro-header h1 {
+        font-size: 16px;
+    }
+    body {
+        font-size: 20px;
+    }
+}
+
